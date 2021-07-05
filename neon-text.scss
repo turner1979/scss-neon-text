@@ -1,0 +1,44 @@
+@mixin neonInit($conf: ()) {
+
+  // Merge defaults with provided $conf
+  $config: map-merge((
+    baseColour: '#fff',
+    glowColour: '#f09'
+  ), $conf);
+
+  // Create variables for convienence and readability
+  $baseColour: map-get($config, baseColour);
+  $glowColour: map-get($config, glowColour);
+
+  @keyframes neonText {
+    100% {
+      color: #{$baseColour};
+      text-shadow:
+      0 0 4px #{$baseColour},
+      0 0 11px #{$baseColour},
+      0 0 19px #{$baseColour},
+      0 0 40px #{$glowColour},
+      0 0 80px #{$glowColour},
+      0 0 90px #{$glowColour},
+      0 0 100px #{$glowColour},
+      0 0 150px #{$glowColour};
+    }
+    0% {
+      color: #{$baseColour};
+      text-shadow:
+      0 0 4px #{$baseColour},
+      0 0 10px #{$baseColour},
+      0 0 18px #{$baseColour},
+      0 0 38px #{$glowColour},
+      0 0 73px #{$glowColour},
+      0 0 80px #{$glowColour},
+      0 0 94px #{$glowColour},
+      0 0 140px #{$glowColour};
+    }
+  }
+
+}
+
+@mixin neonText() {
+  animation: neonText 0.11s ease-in-out infinite alternate;
+}

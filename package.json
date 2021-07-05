@@ -1,0 +1,24 @@
+{
+  "name": "scss-neon-text",
+  "version": "1.0.0",
+  "description": "A SCSS Mixin for neon text effect.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "SCSS",
+    "Neon",
+    "Text"
+  ],
+  "author": "Scott Turner",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/turner1979/scss-neon-text.git"
+  },
+  "bugs": {
+    "url": "https://github.com/turner1979/scss-neon-text/issues"
+  },
+  "homepage": "https://github.com/turner1979/scss-neon-text#readme"
+}
